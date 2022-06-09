@@ -15,6 +15,10 @@ Python3 должен быть уже установлен.
 
 Для корректной работы кода необходимо указать переменные окружения. Для этого создайте файл `.env` рядом с `main.py` и запишите туда следующие обязательные переменые:
 * `SUPERJOB_SECRET_KEY` - секретный ключ API сайта SuperJob.ru, который можно получить на странице [Superjob.ru API](https://api.superjob.ru/) после регистрации приложения.
+* `SUPERJOB_APP_ID` - ID приложения, который присвается после регистрации на [Superjob.ru API](https://api.superjob.ru/).
+* `SUPERJOB_LOGIN` - логин, адрес электронной почты для авторизации на сайте [SuperJob.ru](https://www.superJob.ru)
+* `SUPERJOB_PASSWORD` - пароль для авторизации на сайте [SuperJob.ru](https://www.superJob.ru)
+
 
 ## Цель проекта
 
