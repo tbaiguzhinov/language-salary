@@ -73,7 +73,6 @@ def get_vacancies_from_hh(language):
     moscow_area_code = 1
     gathered_vacancies = []
     for page in count(0):
-        print(f"{language} - page {page+1}")
         params = {
             "specialization": programmer_specialization_code,
             "area": moscow_area_code,
@@ -134,7 +133,6 @@ def get_sj_vacancies(language, sj_key, token):
     max_number_vacancies_per_page = 100
     gathered_vacancies = []
     for page in count(0):
-        print(f"{language} - page {page+1}")
         headers = {
             "X-Api-App-Id": sj_key,
             "Authorization": f"Bearer {token}",
