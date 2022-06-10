@@ -192,7 +192,7 @@ def main():
         sj_login=sj_login,
         sj_app_id=sj_app_id,
         sj_password=sj_password,
-        )
+    )
     programming_languages = [
         "TypeScript",
         "Swift",
@@ -225,7 +225,8 @@ def main():
             "vacancies_found": len(gathered_sj_vacancies),
             "vacancies_processed": len(gathered_salaries),
             "average_salary":
-            int(sum(gathered_salaries) / len(gathered_salaries)),
+            int(sum(gathered_salaries) / len(gathered_salaries))
+                if gathered_salaries else None,
         }
     table_for_sj = get_table(
         title="SuperJob Moscow",
@@ -243,7 +244,8 @@ def main():
             "vacancies_found": len(gathered_vacancies),
             "vacancies_processed": len(gathered_salaries),
             "average_salary":
-            int(sum(gathered_salaries) / len(gathered_salaries)),
+            int(sum(gathered_salaries) / len(gathered_salaries))
+                if gathered_salaries else None,
         }
     table_for_hh = get_table(
         title="HeadHunter Moscow",
