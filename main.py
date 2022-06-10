@@ -160,7 +160,7 @@ def get_sj_vacancies(language, sj_key, token):
     return gathered_vacancies
 
 
-def draw_table(title, salaries_per_language):
+def get_table(title, salaries_per_language):
     """Draw table."""
     table_data = []
     table_data.append([
@@ -227,7 +227,7 @@ def main():
             "average_salary":
             int(sum(gathered_salaries) / len(gathered_salaries)),
         }
-    table_for_sj = draw_table(
+    table_for_sj = get_table(
         title="SuperJob Moscow",
         salaries_per_language=salaries_per_language_in_sj,
     )
@@ -245,7 +245,7 @@ def main():
             "average_salary":
             int(sum(gathered_salaries) / len(gathered_salaries)),
         }
-    table_for_hh = draw_table(
+    table_for_hh = get_table(
         title="HeadHunter Moscow",
         salaries_per_language=salaries_per_language_in_hh,
     )
