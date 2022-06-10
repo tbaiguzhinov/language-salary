@@ -42,8 +42,6 @@ def predict_rub_salary_for_hh(vacancy):
             vacancy["salary"]["from"],
             vacancy["salary"]["to"]
         )
-    else:
-        return
 
 
 def predict_rub_salary_for_sj(vacancy):
@@ -59,8 +57,6 @@ def predict_rub_salary_for_sj(vacancy):
             vacancy["payment_from"],
             vacancy["payment_to"]
         )
-    else:
-        return
 
 
 def get_vacancies_from_hh(language):
