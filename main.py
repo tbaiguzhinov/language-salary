@@ -17,10 +17,13 @@ def predict_salary(salary_from, salary_to):
         (float) Average if both values are provided
         Adds 20% if top level is not given
         Extracts 20% of bottom line is not given
+        Rerurns None if both salaries are Null.
     """
-    if not salary_to or salary_to == 0:
+    if not salary_from and not salary_to:
+        return
+    elif not salary_to:
         return salary_from * 1.2
-    elif not salary_from or salary_from == 0:
+    elif not salary_from:
         return salary_to * 0.8
     else:
         return (salary_to + salary_from) / 2
@@ -51,9 +54,7 @@ def predict_rub_salary_for_sj(vacancy):
     Returns:
        (float): Expected salary or None if no salary or not RUR currency.
     """
-    if vacancy["payment_from"] == 0 and vacancy["payment_to"] == 0:
-        return
-    elif vacancy["currency"] == "rub":
+    if vacancy["currency"] == "rub":
         return predict_salary(
             vacancy["payment_from"],
             vacancy["payment_to"]
