@@ -19,14 +19,13 @@ def predict_salary(salary_from, salary_to):
         Extracts 20% of bottom line is not given
         Rerurns None if both salaries are Null.
     """
-    if not salary_from and not salary_to:
-        return
-    elif not salary_to:
-        return salary_from * 1.2
-    elif not salary_from:
-        return salary_to * 0.8
-    else:
+    if salary_from and salary_to:
         return (salary_to + salary_from) / 2
+    elif not salary_to and salary_from:
+        return salary_from * 1.2
+    elif not salary_from and salary_to:
+        return salary_to * 0.8
+    return
 
 
 def predict_rub_salary_for_hh(vacancy):
