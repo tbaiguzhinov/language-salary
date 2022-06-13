@@ -21,9 +21,9 @@ def predict_salary(salary_from, salary_to):
     """
     if salary_from and salary_to:
         return (salary_to + salary_from) / 2
-    elif not salary_to and salary_from:
+    elif not salary_to:
         return salary_from * 1.2
-    elif not salary_from and salary_to:
+    elif not salary_from:
         return salary_to * 0.8
 
 
