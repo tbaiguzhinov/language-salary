@@ -25,7 +25,6 @@ def predict_salary(salary_from, salary_to):
         return salary_from * 1.2
     elif not salary_from and salary_to:
         return salary_to * 0.8
-    return
 
 
 def predict_rub_salary_for_hh(vacancy):
